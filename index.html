@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
   <header class="header">
@@ -21,19 +22,21 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
+<div data-aos="fade-up" data-aos-duration="1000" class="container">
   <section id="home" class="hero">
     <img src="profile.jpg" alt="Profile" class="profile-img" />
     <h1 class="name">Suleman Khan</h1>
     <p class="qualification">B.Tech in Computer Science</p>
     <a href="resume.pdf" class="btn download-btn" download>Download Resume</a>
   </section>
-
+</div>
+  <div data-aos="fade-up" data-aos-duration="1000" class="container">
   <section id="about" class="about">
     <h2>About Me</h2>
     <p>Hi, I'm Suleman, a passionate developer specializing in web development. I love building beautiful and interactive user experiences.I have hands-on experience with HTML, CSS, JavaScript, and React, along with a growing knowledge of backend development using Node.js and databases like MongoDB and MySQL. I also enjoy solving problems on coding platforms and collaborating on projects through GitHub. Currently seeking opportunities to contribute to meaningful tech projects, internships, or part-time roles where I can learn from industry professionals and add value with my enthusiasm and dedication.</p>
   </section>
-
+</div>
+<div data-aos="fade-up" data-aos-duration="1000" class="container">
   <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="project-card">
@@ -43,15 +46,21 @@
     </div>
     <!-- Repeat project-card for more projects -->
   </section>
-
-  <section id="contact" class="contact">
+  </div>
+<div data-aos="fade-up" data-aos-duration="1000" class="container">
+   <section id="contact" class="contact">
     <h2>Contact Me</h2>
     <div class="contact-methods">
       <a href="https://www.instagram.com/khn._.suleman/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="tel:7071301339"><i class="fas fa-phone"></i> +91 7071301339</a>
-      <a href="mailto:sulemankhanw123.com@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Suleman," class="email">sulemankhanw123.com@gmail.com</a>
-      <a href="https://www.linkedin.com/in/suleman-khan-94317a308/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="tel:+1234567890"><i class="fas fa-phone"></i> +91 7071301339</a>
+      <a href="mailto:email@example.com?subject=Portfolio%20Inquiry&body=Hi%20Suleman," class="email">sulemankhanw123.com@gmail.com</a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
   </section>
+  </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
 <footer class="footer">
