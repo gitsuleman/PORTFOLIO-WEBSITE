@@ -14,3 +14,22 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+const navLinks = navMenu.querySelectorAll("a");
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+
+/* Auto close on link click (mobile) */
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    menuToggle.classList.remove("active");
+    navMenu.classList.remove("active");
+  });
+});
+           

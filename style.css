@@ -140,6 +140,52 @@ body {
   backface-visibility: hidden;
 }
 
+/* PROJECT CARD */
+.project-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background: #111;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* IMAGE */
+.project-img {
+  overflow: hidden;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* ZOOM EFFECT */
+.project-card:hover .project-img img,
+.project-card:active .project-img img,
+.project-card:focus-within .project-img img {
+  transform: scale(1.12);
+}
+
+/* CARD POP */
+.project-card:hover,
+.project-card:active,
+.project-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .project-card {
+    transform: none;
+  }
+
+  .project-card:active {
+    transform: scale(0.98);
+  }
+}
+
 .contact-methods a {
   display: inline-flex;
   align-items: center;
@@ -187,4 +233,104 @@ body {
 .footer {
   text-align: center;
   padding: 20px 0;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #111;
+}
+
+/* LOGO */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.highlight {
+  color: #ff4d4d;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  transition: all 0.4s ease;
+}
+
+/* 🔴 MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #111;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .nav.active {
+    max-height: 300px;
+  }
+
+  .nav a {
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ☰ → ❌ ANIMATION */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
 }
